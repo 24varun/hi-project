@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Webpage</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #3498db;
+      color: white;
+      padding: 15px;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:disabled {
+      background-color: #bdc3c7;
+      cursor: not-allowed;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .mobile-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .mobile-title h2 {
+      font-size: 24px;
+      color: #2ecc71;
+    }
+
+    .mobile-title img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Webpage</h1>
+  </header>
+
+  <main>
+    <div class="mobile-title">
+      <h2>Mobile Version</h2>
+      <img src="image11.png" alt="Mobile Image">
+    </div>
+    <button id="continueWithEmail" onclick="sortAndDisplay()">Continue with Email</button>
+    <button id="continueWithMobile" onclick="showMobileMessage()">Continue with Mobile</button>
+    <button id="continueWithGoogle" disabled>Continue with Google</button>
+  </main>
+
+  <script>
+    const users = [
+      { name: 'John Doe', age: 25 },
+      { name: 'Alexander', age: 17 },
+      { name: 'Nelson Mandela', age: 78 },
+      { name: 'Mahatma Gandhi', age: 56 },
+      { name: 'Nikol Tesla', age: 39 }
+    ];
+
+    function sortAndDisplay() {
+      const sortedUsers = users.slice().sort((a, b) => a.age - b.age);
+      const sortedNames = sortedUsers.map(user => user.name).join(', ');
+      window.alert(`Sorted Names: ${sortedNames}`);
+    }
+
+    function showMobileMessage() {
+      const yourName = "Your Name"; // Replace with the actual name
+      window.alert(`Thank you for choosing mobile, ${yourName}`);
+    }
+  </script>
+
+</body>
+</html>
