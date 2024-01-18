@@ -40,7 +40,7 @@ function App() {
       <main>
         <div className="mobile-title">
           <h2>Mobile Version</h2>
-          <img src="placeholder-image.jpg" alt="Mobile Image" />
+          <img src="image.jpg" alt="Mobile Image" />
         </div>
         <button onClick={sortAndDisplay}>Continue with Email</button>
         <button onClick={showMobileMessage}>Continue with Mobile</button>
